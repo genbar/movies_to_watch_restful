@@ -1,6 +1,7 @@
 <h1>Add A New Movie</h1>
 
-<form action="http://localhost:3000/create_movie">
+<!-- <form action="http://localhost:3000/movies" method="post"> -->
+<%= form_tag "http://localhost:3000/movies", :method => "post" do %>
   <div>
     <label for="title">Title</label>
     <input name="title" type="text" id="title" placeholder="Title">
@@ -30,4 +31,5 @@
     <input type="submit" value="Create Movie">
     or <a href="index.html">Cancel</a>
   </div>
-</form>
+<% end %>
+<!-- </form> -->

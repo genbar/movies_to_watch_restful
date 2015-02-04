@@ -1,9 +1,9 @@
 class MoviesController < ApplicationController
-  def edit_form
+  def edit
     @movie = Movie.find(params["id"])
   end
 
-  def update_row
+  def update
     @movie = Movie.find(params["id"])
 
     @movie.title = params["title"]
@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
     redirect_to "http://localhost:3000/movies/#{@movie.id}"
   end
 
-  def create_row
+  def create
     @movie = Movie.new
 
     @movie.title = params["title"]
@@ -31,7 +31,7 @@ class MoviesController < ApplicationController
     redirect_to "http://localhost:3000/movies"
   end
 
-  def new_form
+  def new
   end
 
   def index

@@ -9,7 +9,7 @@
     <div>
       <a href="http://localhost:3000/movies/<%= movie.id %>">Show</a>
       <a href="http://localhost:3000/movies/<%= movie.id %>/edit">Edit</a>
-      <a href="http://localhost:3000/delete_movie/<%= movie.id %>">Delete</a>
+      <%= link_to "Delete", "http://localhost:3000/movies/#{movie.id}", :method => "delete" %>
     </div>
   </li>
   <% end %>
