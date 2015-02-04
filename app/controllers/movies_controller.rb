@@ -1,10 +1,10 @@
 class MoviesController < ApplicationController
   def edit_form
-    @movie = Movie.find_by({ :id => params["id"] })
+    @movie = Movie.find(params["id"])
   end
 
   def update_row
-    @movie = Movie.find_by({ :id => params["id"] })
+    @movie = Movie.find(params["id"])
 
     @movie.title = params["the_title"]
     @movie.year = params["the_year"]
@@ -13,6 +13,8 @@ class MoviesController < ApplicationController
     @movie.image_url = params["the_image_url"]
 
     @movie.save
+
+    redirect_to "http://localhost:3000/movies/#{@movie.id}"
   end
 
   def create_row
@@ -25,10 +27,11 @@ class MoviesController < ApplicationController
     @movie.image_url = params["the_image_url"]
 
     @movie.save
+
+    redirect_to "http://localhost:3000/movies"
   end
 
   def new_form
-
   end
 
   def index
@@ -36,13 +39,15 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find_by({ :id => params["id"] })
+    @movie = Movie.find(params["id"])
   end
 
   def destroy
-    @movie = Movie.find_by({ :id => params["id"] })
+    @movie = Movie.find(params["id"])
 
     @movie.destroy
+
+    redirect_to "http://localhost:3000/movies"
   end
 
 end

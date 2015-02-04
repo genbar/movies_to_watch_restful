@@ -3,27 +3,27 @@
 <form action="http://localhost:3000/update_movie/<%= @movie.id %>">
   <div>
     <label for="title">Title</label>
-    <input placeholder="Enter a title here:" value="<%= @movie.title %>" name="the_title" type="text" id="title">
+    <input name="title" type="text" id="title" value="<%= @movie.title %>" placeholder="Title">
   </div>
 
   <div>
     <label for="year">Year</label>
-    <input name="the_year" type="text" id="year" value="<%= @movie.year %>">
+    <input name="year" type="text" id="year" value="<%= @movie.year %>" placeholder="Year">
   </div>
 
   <div>
     <label for="duration">Duration</label>
-    <input name="the_duration" type="text" id="duration" value="<%= @movie.duration %>">
+    <input name="duration" type="text" id="duration" value="<%= @movie.duration %>" placeholder="Duration">
   </div>
 
   <div>
     <label for="description">Description</label>
-    <textarea name="the_description" id="description"><%= @movie.description %></textarea>
+    <textarea name="description" id="description"><%= @movie.description %></textarea>
   </div>
 
   <div>
-    <label for="picture">Image URL</label>
-    <input name="the_image_url" type="text" id="picture" value="<%= @movie.image_url %>">
+    <label for="image_url">Image URL</label>
+    <input name="image_url" type="text" id="image_url" value="<%= @movie.image_url %>" placeholder="Image URL">
   </div>
 
   <div>
