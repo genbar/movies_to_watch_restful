@@ -10,8 +10,9 @@
   <dt>Description</dt>
   <dd><%= @movie.description %></dd>
 
+  <!-- Show the director's name here instead of an ID -->
   <dt>Director</dt>
-  <dd><%= @movie.director_id %></dd>
+  <dd><%= @movie.director.name %></dd>
 
   <dt>Image URL</dt>
   <dd>
